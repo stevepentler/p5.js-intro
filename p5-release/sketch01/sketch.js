@@ -16,15 +16,15 @@
 // }
 
 function setup() {
-  createCanvas(640, 480);
-  color = 255;
+  createCanvas(1200, 800);
 }
 
 function draw() {
+  var c = color('magenta');
   if (mouseIsPressed) {
-    fill(0);
+    fill(c);
   } else {
     fill(255);
   }
-  ellipse(mouseX, mouseY, 80, 80);
+  ellipse(mouseX, mouseY, 20, 50);
 }
