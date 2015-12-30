@@ -14,17 +14,67 @@
 //   fill(random(color), random(color), random(color));
 //   ellipse(random(width), random(height), size, size_two);
 // }
+ // ----------------------------------------
 
-function setup() {
-  createCanvas(1200, 800);
+// function setup() {
+//   createCanvas(1280, 680);
+//   background('black');
+// }
+
+// function draw() {
+//   if (mouseIsPressed) {
+//     fill('magenta');
+//     ellipse(mouseX, mouseY, 30, 30);
+//   }
+//   else {
+//     fill(255);
+//     ellipse(mouseX, mouseY, 20, 20);
+//   }
+// }
+// -------------------------------------------
+//  Crazy random colors, moves to the right 
+// function setup() {
+//   createCanvas(1280, 680);
+//   background('black');
+// }
+
+// function draw() {
+//   r = random(255)
+//   g = random(255)
+//   b = random(255)
+//   if (mouseIsPressed) {
+//     fill('magenta');
+//     ellipse(mouseX, mouseY, 30, 30);
+//   }
+//   else {
+//     fill(r, g, b);
+//     ellipse(mouseX, mouseY, 40, 20);
+//     mouseX+=5;
+//   }
+// }
+// ---------------------------------------------
+
+// Crazy rotating cylinder thing 
+function setup(){
+  createCanvas(1200, 800, WEBGL);
 }
 
-function draw() {
-  var c = color('magenta');
-  if (mouseIsPressed) {
-    fill(c);
-  } else {
-    fill(255);
-  }
-  ellipse(mouseX, mouseY, 20, 50);
+function draw(){
+  background('black');
+  // rotateX(frameCount * 0.01);
+  rotateZ(frameCount * 0.01);
+  cone(200, 300);
+  torus(100, 60);
+  cylinder(150, 20);
 }
+
+
+
+
+
+
+
+
+
+
+
