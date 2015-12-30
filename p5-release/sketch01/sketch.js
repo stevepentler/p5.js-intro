@@ -70,24 +70,42 @@
 
 
 // -----------------------------------
-//  Wicked XY rotation
-//draw a spining cone with radius 200 and height 200
-function setup(){
-  createCanvas(1200, 800, WEBGL);
+// //  Wicked XY rotation
+// function setup(){
+//   createCanvas(1200, 800, WEBGL);
+// }
+
+// function draw(){
+//   background('black');
+//   rotateX(frameCount * 0.01);
+//   rotateZ(frameCount * .9);
+//   cone(200, 300);
+//   torus(100, 60);
+//   cylinder(150, 20);
+//   ellipsoid(100, 100, 50);
+// }
+
+// --------------------------------------
+function preload() {
+  mySound = loadSound('Get Lucky (Vanderway Edit).mp3');
 }
 
-function draw(){
-  background('black');
-  rotateX(frameCount * 0.01);
-  rotateZ(frameCount * .9);
-  cone(200, 300);
-  torus(100, 60);
-  cylinder(150, 20);
-  ellipsoid(100, 100, 50);
+function setup() {
+  createCanvas(100, 100);
+  background(0, 255, 0);
+  
+  textAlign(CENTER);
+  text('click here to play', width/2, height/2);
+
+  mySound.setVolume(0.9);
 }
 
-
-
+// play sound on mouse press over canvas
+function mousePressed() {
+  if (mouseX < width && mouseY < height && mouseX > 0 && mouseY > 0) {
+    mySound.play();
+  }
+}
 
 
 
