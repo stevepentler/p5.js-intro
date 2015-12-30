@@ -87,7 +87,7 @@
 
 // --------------------------------------
 function preload() {
-  mySound = loadSound('Get Lucky (Vanderway Edit).mp3');
+  mySound = loadSound('/assets/Get Lucky (Vanderway Edit).mp3');
 }
 
 function setup() {
