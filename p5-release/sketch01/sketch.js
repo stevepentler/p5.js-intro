@@ -54,22 +54,37 @@
 // }
 // ---------------------------------------------
 
-// Crazy rotating cylinder thing 
+// // Crazy rotating cylinder thing 
+// function setup(){
+//   createCanvas(1200, 800, WEBGL);
+// }
+
+// function draw(){
+//   background('black');
+//   // rotateX(frameCount * 0.01);
+//   rotateZ(frameCount * 0.01);
+//   cone(200, 300);
+//   torus(100, 60);
+//   cylinder(150, 20);
+// }
+
+
+// -----------------------------------
+//  Wicked XY rotation
+//draw a spining cone with radius 200 and height 200
 function setup(){
   createCanvas(1200, 800, WEBGL);
 }
 
 function draw(){
   background('black');
-  // rotateX(frameCount * 0.01);
-  rotateZ(frameCount * 0.01);
+  rotateX(frameCount * 0.01);
+  rotateZ(frameCount * .9);
   cone(200, 300);
   torus(100, 60);
   cylinder(150, 20);
+  ellipsoid(100, 100, 50);
 }
-
-
-
 
 
 
